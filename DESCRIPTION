@@ -1,0 +1,9 @@
+Package: TCwindUQR
+Type: Package
+Title: Quantify uncertainty in observed tropical cyclone winds
+Version: 1.0
+Date: 2015-10-07
+Author: Suz Tolwinski-Ward
+Maintainer: Suz Tolwinski-Ward <STolwinski-Ward@air-worldwide.com>
+Description: This micro-package is really just 3 utilities that work together to take a set of observed TC windspeed observations (say, from HURDAT2 or ibtracs), and returns a vector of associated standard deviations for each observation.  The values from from the work of Ryan Torn and Chris Snyder in their 2012 Weather and Forecasting paper,"Uncertaintyof Tropical Cyclone Best-Track Information" (doi:10.1175/WAF-D-11-00085.1).
+License: MIT + file LICENSE
