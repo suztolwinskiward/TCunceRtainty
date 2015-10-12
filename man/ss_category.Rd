@@ -2,23 +2,29 @@
 % Please edit documentation in R/funcs.r
 \name{ss_category}
 \alias{ss_category}
-\title{Get Saffir Simpson category given max wind speed.}
+\title{Get Saffir Simpson category given max wind speed or central pressure.}
 \usage{
-ss_category(vx, units = "kt")
+ss_category(vx = NA, pmin = NA, units = "kt")
 }
 \arguments{
-\item{vx}{The max wind speed, in knots}
+\item{vx}{The max wind speed, in knots.}
+
+\item{pmin}{Alternatively, the central pressure of the storm in hPa.
+Conversion to SS Categories from pressure taken from table at
+\url{https://www.unc.edu/~rowlett/units/scales/saffir.html}}
 
 \item{units}{Character vector, either "kt" (default),
-"m/s", or "mph"}
+"m/s", or "mph" for vmax input.}
 }
 \value{
 cat Category/ies. Values 1-5 denote category 1-5
-hurricanes; 0 denotes tropical storm; -1 denotes tropical
-depression.
+hurricanes. For vmax inputs, 0 denotes tropical storm;
+-1 denotes tropical depression. For pmin inputs, 0 denotes
+tropical storm or tropical depression.
 }
 \description{
 \code{ss_category} returns to Saffir-Simpson Category/ies of
-a tropical cyclone given the (vector of) maximum wind speed(s).
+a tropical cyclone given the (vector of) maximum wind speed(s) or
+a (vector of) central pressure value(s).
 }
 
